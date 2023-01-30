@@ -42,7 +42,7 @@ class Circuitbox
       value.is_a?(Proc) ? value.call : value
     end
 
-    def run!(run_options = {})
+    def run!(run_options = {}, &block)
       currently_open = open_flag?
       if currently_open || should_open?
         logger.debug "[CIRCUIT] open: skipping #{service}"
