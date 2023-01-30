@@ -75,7 +75,7 @@ class Circuitbox
       return response
     end
 
-    def run(run_options = {})
+    def run(run_options = {}, &block)
       begin
         run!(run_options, &block)
       rescue Circuitbox::Error
