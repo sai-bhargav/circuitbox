@@ -77,7 +77,7 @@ class Circuitbox
 
     def run(run_options = {})
       begin
-        run!(run_options, &Proc.new)
+        run!(run_options, &block)
       rescue Circuitbox::Error
         nil
       end
